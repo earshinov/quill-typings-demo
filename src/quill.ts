@@ -37,7 +37,7 @@ import * as QuillImplementation from 'quill';
 // import quill type declaration from `@types/quill`
 import { default as QuillTypescriptClass } from 'quill';
 
-// re-export the type declaration (see `QuillType` below)
+// re-export the type declaration
 export type QuillType = QuillTypescriptClass;
 
 // export a variable declaration for accessing Quill statics
