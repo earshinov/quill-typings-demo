@@ -1,12 +1,16 @@
 import '../node_modules/quill/dist/quill.snow.css';
-import { Quill, QuillType } from './quill';
+import { Delta, Quill, QuillType } from './quill';
 
+
+const _Delta: typeof Delta = Quill.import('delta');
 
 class SampleQuillModule {
 
   constructor(quill: QuillType, options = {}) {
     window.setTimeout(() => {
-      quill.insertText(0, 'Hello from SampleQuillModule!');
+      quill.updateContents(new _Delta([
+        { insert: 'Hello from SampleQuillModule!' },
+      ]));
     });
   }
 }
